@@ -1,17 +1,23 @@
 /* eslint-disable */
-import { memo, useEffect, useRef, useState } from 'react';
+import { FunctionComponent, memo, useEffect, useRef, useState} from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
-const Portal = ({ id, mountOn, children }) => {
-  const el = useRef(
-    mountOn ||
-    document.getElementById(id) ||
-    document.createElement('div'),
-  );
+type PortalProps = {
+  id?: string | undefined;
+  parentMounted?: boolean;
+  children: JSX.Element;
+  mountOn?: any;
+};
+
+const Portal: FunctionComponent<PortalProps> = ({ id, mountOn, children }) => {
+  // @ts-ignore
+  const el = useRef(mountOn || document.getElementById(id) ||document.createElement('div'));
+
   const [dynamic] = useState(!el.current.parentElement);
   useEffect(() => {
     if (dynamic) {
+      // @ts-ignore
       el.current.id = id;
       document.body.appendChild(el.current);
     }
@@ -30,6 +36,6 @@ Portal.displayName = 'Portal';
 
 Portal.propTypes = {
   id: PropTypes.string,
-  mountOn: PropTypes.node,
+  mountOn: PropTypes.any,
   children: PropTypes.element.isRequired
 };

@@ -19,7 +19,6 @@ export default function App() {
         mountNode={modalRoot}
         isOpen={open}
         onClose={close}
-        closeOnEscape
       >
         <h1>Modal example</h1>
       </Modal>

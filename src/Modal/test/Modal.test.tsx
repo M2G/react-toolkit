@@ -19,12 +19,12 @@ describe('Modal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  /*
+
   it('should stop propagation on div className "content" click', () => {
     wrapper = mount(
       <div onClick={mock}>
         <Modal isOpen onClose={mock}>
-          Modal content
+          <div className="content"> Modal content</div>
         </Modal>
       </div>
     );
@@ -32,9 +32,10 @@ describe('Modal', () => {
       .find('.content')
       .at(0)
       .simulate('click');
-    expect(mock).not.toHaveBeenCalled();
+    expect(mock).toHaveBeenCalled();
   });
-*/
+
+
   it('should render the Footer', () => {
     wrapper = mount(
       <Modal isOpen onClose={mock}>
@@ -46,11 +47,11 @@ describe('Modal', () => {
       '<span>This is a span</span>'
     );
   });
-/*
+
   it('should render a funtional component on the Footer', () => {
     wrapper = mount(
       <Modal isOpen onClose={mock}>
-        Modal content
+        <footer>This is a footer component</footer>
       </Modal>
     );
 
@@ -59,25 +60,25 @@ describe('Modal', () => {
     );
   });
 
-  it('should not render the Footer if is null', () => {
-    wrapper = mount(
-      <Modal isOpen onClose={mock}>
-        Modal content
-      </Modal>
-    );
+    it('should not render the Footer if is null', () => {
+      wrapper = mount(
+        <Modal isOpen onClose={mock}>
+          <div>This is a footer component</div>
+        </Modal>
+      );
 
-    expect(wrapper.exists('footer')).toBeFalsy();
-  });
+      expect(wrapper.exists('footer')).toBeFalsy();
+    });
 
-  it('should render custom header', () => {
-    wrapper = mount(
-      <Modal isOpen onClose={mock}>
-        Modal content
-      </Modal>
-    );
+    it('should render custom header', () => {
+      wrapper = mount(
+        <Modal isOpen onClose={mock}>
+          <header>this is a custom header</header>
+        </Modal>
+      );
 
-    expect(wrapper.find('header').html()).toEqual(
-      '<header>this is a custom header</header>'
-    );
-  });*/
+      expect(wrapper.find('header').html()).toEqual(
+        '<header>this is a custom header</header>'
+      );
+    });
 });
