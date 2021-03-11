@@ -31,7 +31,7 @@ const ModalContent: FunctionComponent<ModalContentProps> = ({
 
   function handleClickOutside(e) {
     if (ref.current && !ref?.current?.contains(e.target)) {
-      // setClickedOutside(true);
+      onClose && onClose();
       console.log('outside')
     }
   }
@@ -39,15 +39,14 @@ const ModalContent: FunctionComponent<ModalContentProps> = ({
   useEffect(() => {
     if (isOpen) window.addEventListener('mousedown', handleClickOutside);
     return () => { if (isOpen) window.removeEventListener('mousedown', handleClickOutside) };
-  }, [isOpen, onClose]);
+  }, [ref, isOpen, onClose]);
 
   return (
     <Portal mountOn={mountOn}>
       <div
         className={className}>
         <button onClick={onClose}>close</button>
-        <div
-          ref={ref}
+        <div ref={ref}
           //@ts-ignore
           className={style.modalBody}
         >{children}</div>

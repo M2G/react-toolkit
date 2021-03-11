@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00e7538b-7fa1-442e-b015-6631d7910af2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/custom.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modal/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modal/ModalContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modal/ModalContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modal/test/Modal.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modal/test/Modal.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Portal/Portal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Portal/Portal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -144,7 +139,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615410954777</updated>
-      <workItem from="1615410955882" duration="27552000" />
+      <workItem from="1615410955882" duration="28110000" />
+      <workItem from="1615498706524" duration="1118000" />
     </task>
     <servers />
   </component>
