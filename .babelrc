@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "react-app",
+    "@babel/preset-react",
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "airbnb"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/proposal-optional-chaining",
+    "@babel/proposal-nullish-coalescing-operator"
+  ]
+}
