@@ -18,13 +18,9 @@ const ModalContent: FunctionComponent<ModalContentProps> = ({
   children,
   mountOn,
 }) => {
-  // @ts-ignore
-  const className = classnames([style.modal], {
-    modal: true,
+  const className = classnames(
     // @ts-ignore
-    [style.open]: isOpen,
-    // @ts-ignore
-    [style.close]: parentMounted === false ? undefined : !isOpen,
+    [style.modal], { modal: true, [style.open]: isOpen, [style.close]: parentMounted === false ? undefined : !isOpen,
   });
 
   const ref: any = useRef();
@@ -43,8 +39,7 @@ const ModalContent: FunctionComponent<ModalContentProps> = ({
 
   return (
     <Portal mountOn={mountOn}>
-      <div
-        className={className}>
+      <div className={className}>
         <button onClick={onClose}>close</button>
         <div ref={ref}
           //@ts-ignore

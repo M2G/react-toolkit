@@ -36,7 +36,7 @@
       "ESNext",
       "dom"
     ],
-    "rootDirs": ["src", "stories"],
+    "rootDirs": ["src"],
     "baseUrl": "./",
     "paths": {
       "@public": ["./public/*"],
@@ -45,8 +45,7 @@
     }
   },
   "include": [
-    "./src",
-    "./stories"
+    "./src"
   ],
   "exclude": [
     "**/__tests__/*",
